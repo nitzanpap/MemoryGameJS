@@ -51,4 +51,8 @@
   height: 300px;
   width: 400px;
 }
+
+* body .disabled {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */

@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
         resultDisplay.textContent = cardsWon.length
         if (cardsWon.length === cardArray.length / 2) {
             resultDisplay.textContent = "Congratulations! You won the game!"
+            grid.classList.toggle("disabled")
         }
     }
 
