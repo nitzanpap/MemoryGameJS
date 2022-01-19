@@ -17,5 +17,16 @@
         height: 100vh;
         overflow: hidden;
         margin: 0;
+        h1 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .grid {
+            display: flex;
+            flex-flow: row wrap;
+            height: 300px;
+            width: 400px;
+        }
     }
 }
