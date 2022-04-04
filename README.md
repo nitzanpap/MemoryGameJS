@@ -1,6 +1,6 @@
 # js-games
 
-Learning JavaScript by creating games.
+Learning JavaScript by creating a flipping cards memory game.
 
 ## How To Start Playing
 
