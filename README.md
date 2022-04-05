@@ -1,4 +1,4 @@
-# js-games
+# MemoryGameJS
 
 Learning JavaScript by creating a flipping cards memory game.
 
