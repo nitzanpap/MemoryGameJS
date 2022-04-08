@@ -56,7 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const grid = document.querySelector(".grid")
     const resultDisplay = document.querySelector("#result")
     let cardsChosen = []
-    let cardsChosenId = []
+    let cardsChosenId = [];
+    let alreadySelected = [];
     let cardsWon = []
 
     // Create yout board
@@ -78,7 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (cardsChosen[0] === cardsChosen[1]) {
             cards[optionOneId].setAttribute("src", "images/white.png")
             cards[optionTwoId].setAttribute("src", "images/white.png")
-            alert("You found a match!")
+            alert("You found a match!");
+            alreadySelected.push(optionOneId, optionTwoId);
             cardsWon.push(cardsChosen)
         } else {
             cards[optionOneId].setAttribute("src", "images/blank.png")
@@ -97,13 +99,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // Flip your card
     function flipCard() {
         let cardId = this.getAttribute("data-id")
+
+        if(!alreadySelected.includes(cardId)){
         cardsChosen.push(cardArray[cardId].name)
         cardsChosenId.push(cardId)
         this.setAttribute("src", cardArray[cardId].img)
+        console.log(cardsChosen)
+        console.log(cardsChosenId)
         if (cardsChosen.length === 2) {
             setTimeout(checkForMatch, 500)
-        }
+         }
     }
+
+}
 
     createBoard()
 })
